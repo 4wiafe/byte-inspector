@@ -20,6 +20,15 @@ int main(int argc, char *argv[])
             value = (unsigned char)argv[i][j];
 
             printf("%c : %u : %X : ", argv[i][j], value, value);
+
+            for (int k = CHAR_BIT - 1; k >= 0; k--)
+            {
+                bit = (value >> k) & 1;
+
+                printf("%d", bit);
+            }
+
+            printf("\n");
         }
     }
 
