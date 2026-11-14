@@ -13,6 +13,14 @@ int main(int argc, char *argv[])
     for (int i = 1; i < argc; i++)
     {
         printf("Argument: %s\n", argv[i]);
+
+        // Loop to print the characters of the argument, their ascii value and their hex value
+        for (int j = 0; j < strlen(argv[i]); j++)
+        {
+            value = (unsigned char)argv[i][j];
+
+            printf("%c : %u : %X : ", argv[i][j], value, value);
+        }
     }
 
     return 0;
